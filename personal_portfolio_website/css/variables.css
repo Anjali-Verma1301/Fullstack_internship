@@ -1,0 +1,14 @@
+:root {
+    --background-color: #000000;
+    --primary-color: #e50914;
+    --secondary-color: #ff3333;
+    --accent-color: #ff0000;
+
+    --text-color: #ffffff;
+    --muted-text-color: #b3b3b3;
+
+    --card-color: #151515;
+    --border-color: #3a3a3a;
+
+    --main-font: Arial, sans-serif;
+}
