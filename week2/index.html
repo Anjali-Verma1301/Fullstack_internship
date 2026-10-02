@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Interactive Task Manager</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Interactive Task Manager</h1>
+            <p>Organize your tasks efficiently</p>
+        </header>
+
+        <!-- Add Task Form -->
+        <form id="taskForm">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter a task..."
+                autocomplete="off"
+            >
+
+            <select id="priorityInput">
+                <option value="low">Low Priority</option>
+                <option value="medium" selected>Medium Priority</option>
+                <option value="high">High Priority</option>
+            </select>
+
+            <button type="submit">Add Task</button>
+
+        </form>
+
+        <p id="errorMessage"></p>
+
+        <!-- Search -->
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search tasks..."
+        >
+
+        <!-- Filters -->
+        <div class="filters">
+
+            <button class="filter-btn active" data-filter="all">
+                All
+            </button>
+
+            <button class="filter-btn" data-filter="active">
+                Active
+            </button>
+
+            <button class="filter-btn" data-filter="completed">
+                Completed
+            </button>
+
+        </div>
+
+        <!-- Task List -->
+        <ul id="taskList"></ul>
+
+        <!-- Statistics -->
+        <section class="statistics">
+
+            <div>
+                <strong id="totalTasks">0</strong>
+                <span>Total</span>
+            </div>
+
+            <div>
+                <strong id="activeTasks">0</strong>
+                <span>Active</span>
+            </div>
+
+            <div>
+                <strong id="completedTasks">0</strong>
+                <span>Completed</span>
+            </div>
+
+        </section>
+
+        <!-- Actions -->
+        <div class="actions">
+
+            <button id="clearCompleted">
+                Clear Completed
+            </button>
+
+            <button id="themeToggle">
+                🌙 Dark Mode
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>
