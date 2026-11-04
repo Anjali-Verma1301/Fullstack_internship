@@ -1,0 +1,9 @@
+@'
+target/
+**/target/
+.env
+**/.env
+*.class
+.vscode/
+.idea/
+'@ | Set-Content -Path .gitignore
