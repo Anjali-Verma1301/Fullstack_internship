@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A weather application with real-time weather and a five-day forecast.">
+    <title>WeatherWise | Weather App</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <main class="app-container">
+        <header class="app-header">
+            <a href="#" class="logo">WeatherWise</a>
+            <button id="unitToggle" class="unit-toggle" type="button">
+                Switch to °F
+            </button>
+        </header>
+
+        <section class="search-section">
+            <h1>Discover Your Weather</h1>
+            <p>Find current conditions and the forecast for any city.</p>
+
+            <form id="searchForm" class="search-form">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Enter city name..."
+                    autocomplete="off"
+                    aria-label="Search city"
+                    required
+                >
+                <button type="submit">Search</button>
+                <ul id="suggestions" class="suggestions" hidden></ul>
+            </form>
+
+            <p id="statusMessage" role="status" aria-live="polite"></p>
+        </section>
+
+        <section id="currentWeather" aria-label="Current weather">
+            <div class="empty-state">
+                <h2>Welcome to WeatherWise</h2>
+                <p>Search for a city to see its current weather.</p>
+            </div>
+        </section>
+
+        <section class="forecast-section">
+            <h2>5-Day Forecast</h2>
+            <div id="forecast" class="forecast-grid">
+                <p>Your forecast will appear here.</p>
+            </div>
+        </section>
+
+        <section class="favorites-section">
+            <h2>Favorite Cities</h2>
+            <div id="favorites" class="favorites-list">
+                <p>No favorite cities saved yet.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>WeatherWise · Weather information powered by a weather API.</p>
+        </footer>
+    </main>
+
+    <script src="js/config.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/weatherService.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

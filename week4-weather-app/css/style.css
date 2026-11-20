@@ -1,0 +1,269 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: Arial, sans-serif;
+    color: #f8fafc;
+    background: #0f172a;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f172a, #164e63, #1e3a8a);
+    padding: 24px;
+}
+
+button, input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 18px;
+    background: #38bdf8;
+    color: #082f49;
+    font-weight: bold;
+}
+
+button:hover {
+    filter: brightness(1.08);
+}
+
+.app-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 65px;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.unit-toggle {
+    background: #ffffff1a;
+    color: white;
+    border: 1px solid #ffffff40;
+}
+
+.search-section {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.search-section h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    margin-bottom: 14px;
+}
+
+.search-section > p {
+    color: #cbd5e1;
+    margin-bottom: 20px;
+}
+
+.search-form {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    max-width: 580px;
+    margin: 25px auto 12px;
+}
+
+.search-form input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px;
+    border: 1px solid #64748b;
+    border-radius: 10px;
+    background: #ffffff12;
+    color: white;
+    outline: none;
+}
+
+.search-form input::placeholder {
+    color: #cbd5e1;
+}
+
+.search-form input:focus {
+    border-color: #38bdf8;
+}
+
+#statusMessage {
+    min-height: 24px;
+    color: #bae6fd;
+}
+
+.suggestions {
+    position: absolute;
+    z-index: 10;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 90px;
+    list-style: none;
+    text-align: left;
+    background: #1e293b;
+    border: 1px solid #475569;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.suggestions li {
+    padding: 12px;
+    cursor: pointer;
+}
+
+.suggestions li:hover {
+    background: #334155;
+}
+
+#currentWeather {
+    margin: 28px 0;
+}
+
+.weather-card,
+.empty-state,
+.forecast-card,
+.favorite-item {
+    background: #ffffff12;
+    border: 1px solid #ffffff25;
+    border-radius: 18px;
+    padding: 24px;
+    backdrop-filter: blur(12px);
+}
+
+.empty-state {
+    text-align: center;
+    color: #cbd5e1;
+}
+
+.empty-state h2 {
+    color: white;
+    margin-bottom: 12px;
+}
+
+.weather-card {
+    text-align: center;
+}
+
+.weather-card h2 {
+    font-size: 1.6rem;
+}
+
+.weather-icon {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
+
+.temperature {
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: bold;
+    margin: 12px 0;
+}
+
+.condition {
+    text-transform: capitalize;
+    color: #bae6fd;
+}
+
+.weather-details {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.detail {
+    background: #ffffff0c;
+    border-radius: 12px;
+    padding: 16px 8px;
+}
+
+.detail span {
+    display: block;
+    margin-top: 6px;
+}
+
+.forecast-section,
+.favorites-section {
+    margin-top: 35px;
+}
+
+.forecast-section h2,
+.favorites-section h2 {
+    margin-bottom: 18px;
+}
+
+.forecast-grid,
+.favorites-list {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.forecast-card {
+    text-align: center;
+    padding: 16px 8px;
+}
+
+.forecast-card h3 {
+    font-size: 1rem;
+}
+
+.forecast-card .weather-icon {
+    width: 55px;
+    height: 55px;
+}
+
+.forecast-card p {
+    margin: 6px 0;
+}
+
+.favorite-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 12px;
+}
+
+.favorite-item button {
+    padding: 8px;
+}
+
+.loading,
+.error-message {
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    background: #ffffff12;
+    margin: 16px 0;
+}
+
+.error-message {
+    color: #fecaca;
+}
+
+footer {
+    text-align: center;
+    color: #cbd5e1;
+    margin-top: 55px;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}

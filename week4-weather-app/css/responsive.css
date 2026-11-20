@@ -1,0 +1,53 @@
+
+@media (max-width: 700px) {
+    body {
+        padding: 16px;
+    }
+
+    .app-header {
+        margin-bottom: 45px;
+    }
+
+    .weather-details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .forecast-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .favorites-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 420px) {
+    .search-form {
+        flex-wrap: wrap;
+    }
+
+    .search-form input {
+        flex-basis: 100%;
+    }
+
+    .search-form button {
+        width: 100%;
+    }
+
+    .suggestions {
+        right: 0;
+        top: 58px;
+    }
+
+    .app-header {
+        align-items: flex-start;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .unit-toggle {
+        padding: 10px;
+    }
+}
